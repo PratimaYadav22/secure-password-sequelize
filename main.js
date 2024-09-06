@@ -27,6 +27,7 @@ app.use(
     expressjwt({
         secret: process.env.JWT_SECRET,
         algorithms: ["HS256"],
+        getToken: req => req.cookies.token || req.headers.authorization?.split(' ')[1]
     }).unless({ path: ["/login", "/signup", '/'] })
 );
 
