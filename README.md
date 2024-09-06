@@ -7,7 +7,7 @@ npx sequelize-cli model:generate --name UserPassword --attributes ownerUserId:in
 npx sequelize-cli migration:create --name modify_users_passwords_add_weak_encryption_column
 ```
 
-Run migration
+Run dbmigration
 
 ```shell
 npx sequelize-cli db:migrate
